@@ -32,12 +32,12 @@ unsigned long previousAlarmCheck = 0;
 
 void setup() 
 {
-  Serial.begin(9600);
+  //Serial.begin(9600);
   setTime(00,00,01,01,01,2006);
   pinMode(buttonPin, INPUT);
   pinMode(led, OUTPUT); 
 
-  PrintTime();
+  //PrintTime();
 }
 
 void loop() {
@@ -48,7 +48,7 @@ void loop() {
 
 void CheckAlarm()
 {
-  if(millis()-previousAlarmCheck>60000)
+  if(millis()-previousAlarmCheck>300000)
   {
     if(weekday() == alarmDay && hour() == alarmHour && lastAlarmDay != day())
     {
@@ -175,7 +175,7 @@ void LightLed(int isOn)
 
 void ShowTime()
 {
-  PrintTime();
+  //PrintTime();
   SignLongButton();
   delay(1000);
   for(int i=0; i<weekday() ; i++)
@@ -216,28 +216,28 @@ void ShowTime()
   state = 0;
 }
 
-void PrintTime()
-{
-  Serial.print("Year: ");
-  Serial.println(year());
-  Serial.print("Month: ");
-  Serial.println(month());
-  Serial.print("Day: ");
-  Serial.println(day());
-  Serial.print("Weekday: ");
-  Serial.println(weekday());
-  Serial.print("Hour: ");
-  Serial.println(hour());
-  Serial.print("Min: ");
-  Serial.println(minute());
-  Serial.print("Sec: ");
-  Serial.println(second());
-  Serial.print("AlarmDay: ");
-  Serial.println(alarmDay);
-  Serial.print("AlarmHour: ");
-  Serial.println(alarmHour);
-  Serial.print("State: ");
-  Serial.println(state);
-  Serial.println("************************");
-}
+//void PrintTime()
+//{
+//  Serial.print("Year: ");
+//  Serial.println(year());
+//  Serial.print("Month: ");
+//  Serial.println(month());
+//  Serial.print("Day: ");
+//  Serial.println(day());
+//  Serial.print("Weekday: ");
+//  Serial.println(weekday());
+//  Serial.print("Hour: ");
+//  Serial.println(hour());
+//  Serial.print("Min: ");
+//  Serial.println(minute());
+//  Serial.print("Sec: ");
+//  Serial.println(second());
+//  Serial.print("AlarmDay: ");
+//  Serial.println(alarmDay);
+//  Serial.print("AlarmHour: ");
+//  Serial.println(alarmHour);
+//  Serial.print("State: ");
+//  Serial.println(state);
+//  Serial.println("************************");
+//}
 
