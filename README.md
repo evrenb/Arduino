@@ -1,5 +1,5 @@
 # Small Arduino Projects
-####1- DayAlarm
+###1- DayAlarm
 Alarm goes off on a specific day of the week and at a specidic hour. It can be dismissed by a button, and goes off next week again.
 
 **The setup is:**
