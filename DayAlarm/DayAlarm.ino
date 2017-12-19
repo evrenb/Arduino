@@ -26,7 +26,7 @@ int lastAlarmDay = 0;
  * 6 = alarm
  */
 
-int led = 13;
+int led = 4;
 unsigned long previousLightLed = 0;
 unsigned long previousAlarmCheck = 0;
 
@@ -36,7 +36,8 @@ void setup()
   setTime(00,00,01,01,01,2006);
   pinMode(buttonPin, INPUT);
   pinMode(led, OUTPUT); 
-
+  pinMode(13, OUTPUT);
+  digitalWrite(13, LOW);
   //PrintTime();
 }
 
