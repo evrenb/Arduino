@@ -14,7 +14,7 @@ Alarm goes off on a specific day of the week and at a specific hour. It can be d
 - Long push (More than 2 sec.)
 
 **Usage:**
-- Short push to dismiss the alarm, until newt week
+- Short push to dismiss the alarm, until next week
 - Short push to see the current day, time and alarm day/time
 	- Multiple short pulses
 	- Multiple long pulses for the current day (1:sunday, ... 7: saturday)
