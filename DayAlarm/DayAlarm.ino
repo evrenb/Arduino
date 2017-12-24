@@ -1,4 +1,5 @@
 #include <TimeLib.h>
+#include "LowPower.h"
 
 const int buttonPin = 2;
 int buttonState = 0;
@@ -42,9 +43,13 @@ void setup()
 }
 
 void loop() {
+  //PrintTime();
   CheckButton();
   if(state == 6) LightLed(1);
   if(state == 0) CheckAlarm();
+
+  LowPower.idle(SLEEP_8S, ADC_OFF, TIMER2_OFF, TIMER1_OFF, TIMER0_ON, 
+                SPI_OFF, USART0_OFF, TWI_OFF);
 }
 
 void CheckAlarm()
@@ -240,5 +245,6 @@ void ShowTime()
 //  Serial.print("State: ");
 //  Serial.println(state);
 //  Serial.println("************************");
+//  delay(1000);
 //}
 
